@@ -1,0 +1,89 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+.system {
+    background-color: #134A45;
+    width: 100%;
+    height: 920px;
+    padding-top: 18px;
+    color: white;
+
+    .container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    &__subscribe {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        background-color: #B961CD;
+        width: 96%;
+        height: 124px;
+
+
+
+        &__description {
+            line-height: 24px;
+            margin-left: 43px;
+            font-size: 16px;
+            width: 285px;
+        }
+
+        &__p {
+            line-height: 24px;
+            font-size: 13px;
+        }
+
+        &__btn {
+            text-decoration: none;
+            color: white;
+            margin-right: 38px;
+        }
+    }
+
+    &__need {
+        display: flex;
+        justify-content: space-between;
+
+        &__text {
+            margin-left: 50px;
+            font-size: 13px;
+            letter-spacing: 4px;
+            margin-top: 118px;
+        }
+
+        &__health {
+            letter-spacing: 0.6px;
+            line-height: 57px;
+            margin-left: 50px;
+            margin-top: 30px;
+            font-size: 46px;
+            width: 393px;
+            height: 171px;
+        }
+
+        &__p {
+            width: 456px;
+            height: 140px;
+            margin-top: 35px;
+            margin-left: 50px;
+            font-size: 17px;
+            letter-spacing: 0.2px;
+            line-height: 28px;
+        }
+
+        &__img {
+            width: 451px;
+            height: 660px;
+            margin-right: 129px;
+            margin-top: 18px;
+        }
+    }
+
+}
+

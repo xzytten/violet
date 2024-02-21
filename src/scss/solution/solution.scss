@@ -1,0 +1,84 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+@mixin card($bg-color, $text-color) {
+    text-align: center;
+    color: $text-color;
+    background-color: $bg-color;
+    height: 769px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img{
+        width: 363px;
+        height: 270px;
+        margin-top: 120px;
+    }
+
+    &__text{
+        margin-top: 47px;
+        font-size: 40px;
+        letter-spacing: 0.2px;
+    }
+
+    &__description{
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        width: 367px;
+        margin-top: 32px;
+    }
+
+    &__ending{
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        width: 387px;
+        margin-top: 32px;
+    }
+
+    .line{
+     @include line(550px, #276B65)
+    }
+    
+}
+
+.solution {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 99px;
+
+
+    &__text {
+        letter-spacing: 4px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        letter-spacing: 0.6px;
+        font-size: 49px;
+        line-height: 57px;
+        width: 702px;
+        height: 102px;
+        margin-bottom: 46px;
+    }
+
+    &__cards {
+        display: flex;
+        width: 1100px;
+    }
+
+    .credentialing{
+        @include card(#96C9E9, #134A45)
+    }
+
+    .upskilling{
+        @include card(#134A45, colors.$primary-color2)
+    }
+
+
+}

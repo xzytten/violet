@@ -1,0 +1,80 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+@mixin arrow2 ($arrow-w, $arrow-h) {
+    @include arrow($arrow-w, $arrow-h);
+    position: absolute;
+    bottom: 40px;
+    left: 258px;
+}
+
+@mixin card($backcolor, $color, ) {
+    position: relative;
+    background-color: $backcolor;
+    height: 524px;
+    width: 340px;
+    color: $color;
+
+    .card__title {
+        font: 26px;
+        line-height: 30px;
+        width: 184px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    .card__description {
+        font-size: 17px;
+        margin-top: 19px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        width: 238px;
+        margin-left: 20px;
+    }
+};
+
+.team-help {
+    height: 898px;
+    background-color: #CFD4D8;
+
+
+    .container{
+        @include container;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 50px;
+        line-height: 50px;
+        width: 617px;
+        margin-top: 94px;
+        margin-left: 50px;
+    }
+
+    .cards {
+        margin-top: 66px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .card1 {
+            @include card(colors.$primary-color, colors.$primary-color2 )
+        }
+
+        .card2 {
+            @include card(colors.$primary-color2, colors.$primary-color );
+
+            .card__arrow {
+                @include arrow2(19px, 16px)
+            }
+        }
+
+        .card3 {
+            @include card(#96C9E9, colors.$primary-color );
+
+            .card__arrow {
+                @include arrow2(19px, 16px)
+            }
+        }
+    }
+}

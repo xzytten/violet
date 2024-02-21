@@ -1,0 +1,55 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+@mixin link {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1200px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left-bar {
+        width: 390px;
+        margin-left: 192px;
+        display: flex;
+        justify-content: space-between;
+
+        &__link {
+            @include link
+        }
+    }
+
+    &__right-bar {
+        display: flex;
+        width: 213px;
+        margin-right: 80px;
+        align-items: center;
+        justify-content: space-between;
+
+        &__link {
+            @include link
+        }
+
+        &__demo {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: colors.$primary-color;
+            width: 139px;
+            height: 52px;
+            background: none;
+            border: solid 1px colors.$primary-color;
+
+            &__arrow {
+               @include arrow(16px, 10px);
+            }
+        }
+    }
+}

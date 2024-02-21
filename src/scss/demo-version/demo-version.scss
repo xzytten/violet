@@ -1,0 +1,40 @@
+@use '../primary_style/colors.scss';
+
+.demo{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: colors.$primary-color3;
+
+    &__title{
+        width: 726px;
+        height: 114px;
+        letter-spacing: 0.7px;
+        font-size: 50px;
+        margin-top: 118px;
+        text-align: center;
+    }
+
+    &__description{
+        width: 743px;
+        height: 28px;
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+
+    &__button{
+        width: 339px;
+        height: 57px;
+        margin-top: 45px;
+        background-color: colors.$primary-color;
+        color: colors.$primary-color2;
+        font-size: 25px;
+        text-align: start;
+        padding-left: 45px;
+        border: none;
+        cursor: pointer;
+    }
+}

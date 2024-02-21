@@ -1,0 +1,173 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+
+@mixin block {
+    .block__title {
+        font-size: 16px;
+        margin-bottom: 19px;
+    }
+
+    .block__text {
+        color: rgba(203, 208, 213, 0.73);
+        font-size: 16px;
+        height: 29px;
+        margin-bottom: 3px;
+    }
+}
+
+.footer {
+    height: 874px;
+    background-color: colors.$primary-color;
+    color: colors.$primary-color2;
+
+    .container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upper-block {
+        display: flex;
+        justify-content: space-between;
+        height: 250px;
+        margin-top: 94px;
+        margin-bottom: 0px;
+
+        .subscribe {
+            margin-left: 50px;
+            width: 387px;
+
+            &__title {
+                letter-spacing: 0.2px;
+                line-height: 52px;
+                font-size: 45px;
+            }
+
+            &__description {
+                margin-top: 35px;
+                letter-spacing: 0.2px;
+                line-height: 28px;
+                font-size: 17px;
+            }
+
+            &__button {
+                color: #fff;
+                margin-top: 38px;
+                background-color: #B961CD;
+                border: none;
+                width: 169px;
+                height: 30px;
+                font-size: 15px;
+                text-align: start;
+                padding-left: 25px;
+                cursor: pointer;
+            }
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 50px;
+            margin-top: 6px;
+            background-color: #0C3834;
+            width: 550px;
+            height: 244px;
+
+
+            &__img {
+                margin-top: 30px;
+                margin-left: 33px;
+                width: 240px;
+                height: 160px;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                width: 194px;
+                height: 185px;
+                margin-right: 51px;
+                margin-top: 30px;
+
+                &__text {
+                    letter-spacing: 4px;
+                    font-size: 12px;
+                }
+
+                &__title {
+                    margin-top: 15px;
+                    letter-spacing: 0.2px;
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+
+                &__link {
+                    font-size: 15px;
+                    margin-top: 43px;
+                    letter-spacing: 0.2px;
+                    width: 77px;
+                    color: colors.$primary-color2;
+                    text-decoration: none;
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid colors.$primary-color2;
+                }
+            }
+        }
+    }
+
+    &__line {
+        margin: 0 auto;
+        margin-top: 13px;
+        @include line(1100px, #2C6862)
+    }
+
+    .lower {
+        display: flex;
+        justify-content: space-between;
+
+        &__left {
+            color: rgba(203, 208, 213, 0.73);
+            font-size: 17px;
+            letter-spacing: 0.2px;
+            margin-top: 136px;
+            margin-left: 50px;
+        }
+
+        .footer__info {
+            display: flex;
+            justify-content: space-evenly;
+            width: 600px;
+            margin-top: 78px;
+
+            &__icos {
+                display: flex;
+                height: 63px;
+                justify-content: space-between;
+                margin-top: 43px;
+                flex-direction: column;
+
+                &__ico {
+                    width: 26px;
+                    height: 23px;
+                }
+            }
+
+            .block1 {
+                @include block;
+            }
+
+            .block2 {
+                @include block;
+            }
+
+            .block3 {
+                @include block;
+            }
+        }
+
+
+    }
+
+}
+

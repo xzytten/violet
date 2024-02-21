@@ -1,0 +1,40 @@
+@use './colors';
+
+@mixin arrow($arrow-w, $arrow-h) {
+    font-size: 14px;
+    display: block;
+    width: $arrow-w;
+    height: $arrow-h;
+    color: red;
+    background: url("../../img/arrow.svg") no-repeat;
+    width: $arrow-w;
+    height: $arrow-h;
+    background-size: 100%;
+    background-position: center;
+}
+
+@mixin line ($width, $color: colors.$primary-color) {
+    display: block;
+    height: 1px;
+    width: $width;
+    background-color: $color;
+    margin-top: 70px;
+}
+
+
+
+
+@mixin container {
+
+    @media (max-width: 1200px) {
+
+        margin: 0 auto;
+        width: 100%;
+    }
+
+
+    @media (min-width: 1200px) {
+        margin: 0 auto;
+        width: 1200px;
+    }
+}

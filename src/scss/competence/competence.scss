@@ -1,0 +1,53 @@
+@use '../primary_style/colors.scss';
+@import '../primary_style/mixin.scss';
+
+.competence {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 73px;
+    width: 100%;
+    height: 686px;
+    background-color: colors.$primary-color2;
+
+    .container{
+        @include container;
+    }
+    .description {
+        margin-top: 0px;
+        height: 686px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+
+        &__text {   
+            margin-top: 99px;
+            font-size: 13px;
+            letter-spacing: 4px;
+        }
+
+        &__title {
+            margin-top: 30px;
+            margin-bottom: 16px;
+            font-size: 47px;
+            width: 428px;
+            height: 171px;
+        }
+
+        &__description{
+            margin-top: 19px;
+            width: 407px;
+            letter-spacing: 0.2px; 
+            line-height: 28px;
+            font-size: 17px;
+        }
+
+    }
+
+    &__img {
+        margin-top: 100px;
+        width: 550px;
+        height: 476px;
+        margin-right: 50px;
+    }
+
+}
